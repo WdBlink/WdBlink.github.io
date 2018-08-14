@@ -5,7 +5,7 @@ subtitle:   "From Andrew Ng"
 iframe:     "//huangxuan.me/sw-101-gdgdf/"
 navcolor:   "invert"
 date:       2018-04-21
-author:     "WdBlink"
+author:     "YEan"
 tags:
     - 机器学习
     - NOTE
