@@ -1,0 +1,141 @@
+---
+layout:     keynote
+title:      "街拍摄影笔记"
+subtitle:   "灵感与到达"
+iframe:     "//huangxuan.me/pwa-qcon2016/"
+navcolor:   "invert"
+date:       2018-06-22
+author:     "WdBlink"
+tags:
+    - 摄影
+    - NOTE
+---
+
+
+## 白天拍摄
+
+#### 时间与光线
+
+* 计算和定义曝光的方法：区域测光和点测光
+
+​	实际操作：**白天**外出拍摄时，相机通常设置如下
+
+> 感光度：ISO400
+>
+> 光圈优先模式：光圈设置为f/8，可以得到足够的景深同时也可以很快把光圈调整到合适的值。
+>
+> 快门优先模式：快门速度设置为1/500秒，能保证抓拍到运动的物体同时也能提供较大的光圈。
+>
+> 对焦模式：自动对焦
+>
+> 测光模式：区域测光
+
+​       以上设置的好处是当想要拍摄**背景虚化的人像**时，不需要特地去调整光圈，而是只须调到**快门优先模式**，因为预设的1/500秒快门速度可以提供足够大的光圈来完成拍摄，这样就能轻松的在两种模式下切换，把更多精力放到取景和构图上。
+
+​       清晨太阳升起的时候和傍晚太阳落山时为**“黄金时间”**
+
+#### 逆光拍摄
+
+​       逆光拍摄可以使用光圈优先模式也可以使用快门优先模式，但需要注意计算曝光量，建议优先选择**点测光模式** ，拍摄步骤基本是——构图、测光、按下快门。
+
+​       对于逆光拍摄来说，相机的**曝光补偿**功能很实用。光线过强时可以用来平衡曝光。    
+![逆光拍摄.jpg](https://upload-images.jianshu.io/upload_images/1083955-f18b796315ad2831.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+## 夜间拍摄
+
+#### 设置相机
+
+* 准备三脚架
+
+* 调整感光度：把相机的感光度调到ISO1600是比较合适的，如果相机给力也可以试着调到ISO3200以上。部分噪点是可以通过后期降噪软件处理的。
+
+* 夜间拍摄街景时很难得到大景深。在夜间**使用光圈优先**（通常设置为f/2）的优点是：可以把拍摄目标从背景中剥离出来，特别是从城市夜晚的灯光中。这种设置可以避免很多夜间拍摄的麻烦。
+
+* 在没有光源的情况下强行把快门速度设置为1/125秒，那么相机将很难完成拍摄。唯一的解决办法就是提高ISO或加大光圈。
+
+* 调整白平衡：白平衡选项中的**钨丝灯（3000k）**就很适合拍摄夜间城市照明下的场景。如果可能的话，在同一场景使用同样的曝光但选择不同的白平衡多拍几张，从中挑出最中意的一张。
+
+​	实际操作：夜间拍摄
+
+> 感光度：ISO1600
+>
+> 光圈优先模式：光圈f/2
+>
+> 快门优先模式：1/15秒。如果场景和光线允许的情况下，可以排除运动轨迹效果。
+>
+> 对焦模式：手动对焦
+>
+> 测光模式：多区域评价测光
+
+#### 拍摄运动目标
+
+​       夜间拍摄通常快门速度比较慢，所以很难把运动物体定格在照片上，因此要尝试另一种思路，拍摄动感照片。
+
+* 安全快门：安全快门速度就是焦距的倒数，如果使用50mm的镜头，那么安全快门速度是1/50秒。高于这个速度就不用担心手抖得问题。
+
+  夜晚拍照时曝光是一件非常复杂的事情，几乎不可能在短时间内完成曝光、定格拍摄对象。必须学会按下快门的同时保持相机的稳定。而有些时候模糊的照片反而更能烘托出夜晚的氛围，表达某种特别额情感。
+![《伦敦，2013年》.jpg](https://upload-images.jianshu.io/upload_images/1083955-7bace61e62d0f8a1.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+#### 关注”色彩“
+
+​	五光十色的霓虹灯是最吸引人的，它可以在同一种照片中营造出冷暖色调共存的效果。
+
+![夜晚的色彩.jpg](https://upload-images.jianshu.io/upload_images/1083955-1191d9a5b93499ec.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+## 后期制作
+
+* 局部润饰
+
+  采用Photoshop设置照片的伽马值、曝光补偿等时，调整尽量不要超过5%，目的是保持照片的本来面目。
+
+* 黑白照片
+
+  通常颜色混乱的照片和明暗对比强烈的照片适合黑白照片。
+
+## 灵感来源
+
+* 橱窗与静物
+
+  城市的街道不只有行人和建筑物，橱窗往往能体现一个时代的风貌。街头的广告牌和标语也能突出时代的特点，适当地在构图中融入这些元素。
+
+  ![橱窗样张.jpg](https://upload-images.jianshu.io/upload_images/1083955-1ec89e653a885ce1.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+* 人群
+
+ ![人群样张.jpg](https://upload-images.jianshu.io/upload_images/1083955-6c5c49c03d4e5806.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+* 光与影
+
+![样张1.jpg](https://upload-images.jianshu.io/upload_images/1083955-2a68c4f9be03c345.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![逆光样张.jpg](https://upload-images.jianshu.io/upload_images/1083955-1b52d92f3d4b272e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![样张2.jpg](https://upload-images.jianshu.io/upload_images/1083955-0358ab10b47a2d3e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![样张3.jpg](https://upload-images.jianshu.io/upload_images/1083955-c249b6b2be97fa5b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![样张4.jpg](https://upload-images.jianshu.io/upload_images/1083955-79edeb90e64be252.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+* 幽默的表达方式
+
+![幽默样张.jpg](https://upload-images.jianshu.io/upload_images/1083955-8e5f73f9af8914cc.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+* 夜晚的颜色
+
+![色彩.jpg](https://upload-images.jianshu.io/upload_images/1083955-01ed38c5deb6d362.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+* 利用场景中元素聚焦拍摄对象
+
+![利用灯以及铁轨将观众目光聚焦到狗狗上.jpg](https://upload-images.jianshu.io/upload_images/1083955-ce536d838c5828a0.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+* 交通工具中拍照
+
+  取景时要充分考虑已经存在的车窗。车玻璃、反射、气雾甚至污垢，都可以加以利用。
+
+![玻璃反射样张.jpg](https://upload-images.jianshu.io/upload_images/1083955-38e1c049a3e295fd.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+参考资料：《如何街拍》——（法）吉尔达斯·勒佩蒂特-卡斯特
+
