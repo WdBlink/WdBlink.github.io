@@ -1,6 +1,6 @@
 # Site settings
-title: WdBlink Blog
-SEOTitle: 尹鹏宇的博客 | WdBlink's Blog
+title: Yean Blog
+SEOTitle: 尹鹏宇的博客 | Yean's Blog
 header-img: img/home-bg.jpg
 email: buptypy@bupt.edu.cn
 description: "关于技术学习与生活感悟 | 尹鹏宇，BUPT postgraduate student | 这里是 @WdBlink尹鹏宇 的个人博客，与你一起发现更大的世界。"
@@ -92,17 +92,17 @@ service-worker: true
 # Friends
 friends: [
     {
-    #     title: "Su",
-    #     href: "http://su.gallery/"
-    # },{
-        title: "乱序",
-        href: "http://mida.re/"
+         title: "Hux的博客",
+         href: "http://huangxuan.me/"
+     },{
+       # title: "乱序",
+       # href: "http://mida.re/"
     },{
-        title: "前端外刊评论",
-        href: "http://qianduan.guru/"
+       # title: "前端外刊评论",
+       # href: "http://qianduan.guru/"
     },{
-        title: "天镶的博客",
-        href: "http://lingyu.wang/"
+        title: "VdeamoV的博客",
+        href: "https://vdeamov.github.io/"
     },{
         title: "Luke 的自留地",
         href: "http://hmqk1995.github.io"
