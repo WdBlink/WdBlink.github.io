@@ -3,7 +3,7 @@ layout:     post
 title:      "神经网络和深度学习笔记（一）"
 subtitle:   "From Andrew Ng"
 date:       2018-04-16 15:05:00
-author:     "WdBlink"
+author:     "YEan"
 header-img: "img/post-bg-nextgen-web-pwa.jpg"
 header-mask: 0.3
 catalog:    true
