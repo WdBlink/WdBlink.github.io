@@ -1,27 +1,69 @@
 ---
 layout:       post
-title:        "饿了么的 PWA 升级实践"
-subtitle:     "Upgrading Ele.me to Progressive Web App"
-date:         2017-07-12 12:00:00
-author:       "Hux"
+title:        "2018我的Objective Key Result"
+subtitle:     "我拿时间换取了什么"
+date:         2018-04-04 17:40:00
+author:       "YU"
 header-img:   "img/in-post/post-eleme-pwa/eleme-at-io.jpg"
 header-mask:  0.3
 catalog:      true
 multilingual: true
 tags:
-    - 前端开发
-    - JavaScript
-    - PWA
+    - 学习工作计划
 ---
 
-<!-- Chinese Version -->
-<div class="zh post-container">
-    {% capture about_zh %}{% include posts/2017-07-12-upgrading-eleme-to-pwa/zh.md %}{% endcapture %}
-    {{ about_zh | markdownify }}
-</div>
+目标1.尽力准备研究生复试，争取有学上
 
-<!-- English Version -->
-<div class="en post-container">
-    {% capture about_en %}{% include posts/2017-07-12-upgrading-eleme-to-pwa/en.md %}{% endcapture %}
-    {{ about_en | markdownify }}
-</div>
+关键结果1.1 将简历准备好，从新回顾一遍大一参加电子设计大赛期间所学知识与技巧，为面试应对老师提出的各种问题做准备；
+
+关键结果1.2 准备复试笔试内容，侧重基础知识的复习； 
+
+关键结果1.3 如二月初出分之后成绩排名在本组50%以后，则需两手准备，提前联系调剂。
+
+目标2.继续学习Python
+
+关键结果2.1 一月份期间学习完《Headfirst Python》，两天一模块，共11个模块，独立完成书中每一个例程；
+
+关键结果2.2 能独立完成爬虫程序编写以及数据抓取；
+
+关键结果2.3 去猪八戒、csdn、发源地、QQ群等地找一些小的项目练手。
+
+目标3.学习英语
+
+关键结果3.1 继续坚持每天背单词的习惯，每天100个；
+
+关键结果3.2 看美剧时争取不看字幕，锻炼听力。
+
+目标4.提高篮球水平
+
+关键结果4.1
+
+按照网上视频的训练方法提高运球技术，争取能够流畅的进行左右手突破；
+
+关键结果4.2
+
+连续投篮训练，每次投进50球为止，能够习惯各种角度和姿势的投篮；
+
+关键结果4.3
+
+研究生阶段能够代表实验室打篮球比赛。
+
+目标5.吉他
+
+关键结果5.1
+
+每周末找吉他老师学习半天，并每天坚持抽出时间练习；
+
+关键结果5.2
+
+九月份开学前至少练熟一首曲子，达到能在人前献丑的水平。
+
+目标6.每个月都读一本自己想看的书
+
+目标7.坚持不定期写博客，对任何新学的知识、经验、方法、思考等都及时的记录和总结，避免狗熊掰棒子
+
+目标8.完成减脂增肌计划
+
+目标9.学习Lightroom​，练习摄影技巧，整理摄影照片
+
+目标10. 逼自己选择做正确的事
