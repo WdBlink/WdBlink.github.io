@@ -3,7 +3,7 @@ layout:       post
 title:        "2018我的Objective Key Result"
 subtitle:     "我拿时间换取了什么"
 date:         2018-04-04 17:40:00
-author:       "YU"
+author:       "YEan"
 header-img:   "img/in-post/post-eleme-pwa/eleme-at-io.jpg"
 header-mask:  0.3
 catalog:      true
