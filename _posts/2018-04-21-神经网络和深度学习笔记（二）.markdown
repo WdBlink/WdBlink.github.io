@@ -1,0 +1,68 @@
+---
+layout:     keynote
+title:      "神经网络和深度学习笔记（二）"
+subtitle:   "From Andrew Ng"
+iframe:     "//huangxuan.me/sw-101-gdgdf/"
+navcolor:   "invert"
+date:       2018-04-21
+author:     "WdBlink"
+tags:
+    - 机器学习
+    - NOTE
+---
+
+当你构建一个神经网络时，有一些**技巧**是非常重要的。例如，在神经网络设计中，若想遍历m个样本的训练集并不需要直接用for循环去遍历所有样本。
+
+神经网络的计算过程可以分为：**前向传播（forward pass）**和**反向传播(backward pass)**
+
+**logistic回归** （是一个用于二分分类的算法）
+
+### 2.1 二分分类（Binary Classification）
+
+二分分类的例子：一张有两只猫的图片，判断图片中是否有猫。
+
+![](https://upload-images.jianshu.io/upload_images/1083955-483c6f0b51b3cb8b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+（x,y）表示一个单独的样本，x​​ ,y​{0,1}
+
+训练集由m个训练样本组成，(​,​)为训练样本​的输入和输出，​
+
+把像素值都提出来作为特征向量x，输入特征向量的维度​=64​64​3=12288
+
+输出结果y，y​{0,1}
+
+X是一个​​m的矩阵 Y是一个1​m的矩阵
+
+用python实现一个​​m的矩阵
+
+```
+X.shape=(n_x,m)
+Y.shape=(1,m)
+```
+
+### 2.2logistic回归
+
+logistic回归是一个监督学习算法，用于输出y为0或1的情况（二元分类问题）。
+
+预测值​
+
+参数：w​  ​和b​​
+
+已知输入x和参数w和b，想要求预测值​。问题是，当参数w和b都可能是很大的数时，如何使得预测值​是一个介于0~1之间的概率值。于是这里引入一个**​()函数**
+
+![](https://upload-images.jianshu.io/upload_images/1083955-e707fa00af1f1e18.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+#### 成本函数
+
+为了训练logistic回归模型的参数w和d，需要定义一个成本函数
+
+给出m个样本的训练集，希望达到样本预测值​接近于训练集中的​值。
+
+**损失函数**：​
+
+**成本函数**：![](https://upload-images.jianshu.io/upload_images/1083955-6536480856752a0d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+
+损失函数基于单个的样本，成本函数对应多个样本，训练logistic回归模型时要做的就是要找到合适的参数w，b使得​尽可能小。
