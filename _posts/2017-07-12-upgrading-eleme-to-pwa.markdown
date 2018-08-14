@@ -9,7 +9,7 @@ header-mask:  0.3
 catalog:      true
 multilingual: true
 tags:
-    - 学习工作计划
+    - Objiective Key Result
 ---
 
 目标1.尽力准备研究生复试，争取有学上
