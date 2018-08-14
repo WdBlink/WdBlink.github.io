@@ -1,9 +1,9 @@
 ---
 layout:     post
-title:      "下一代 Web 应用模型 —— Progressive Web App"
-subtitle:   "The Next Generation Application Model For The Web - Progressive Web App"
+title:      "神经网络和深度学习笔记（一）"
+subtitle:   "From Andrew Ng"
 date:       2018-04-16 15:05:00
-author:     "YEan"
+author:     "WdBlink"
 header-img: "img/post-bg-nextgen-web-pwa.jpg"
 header-mask: 0.3
 catalog:    true
