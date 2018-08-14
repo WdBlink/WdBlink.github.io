@@ -1,0 +1,41 @@
+---
+layout:     post
+title:      "下一代 Web 应用模型 —— Progressive Web App"
+subtitle:   "The Next Generation Application Model For The Web - Progressive Web App"
+date:       2018-04-16 15:05:00
+author:     "YEan"
+header-img: "img/post-bg-nextgen-web-pwa.jpg"
+header-mask: 0.3
+catalog:    true
+tags:
+    - 机器学习
+---
+
+#### 1.1 什么是神经网络（Neural Network）？
+
+所谓“深度学习”指的是训练神经网络。
+
+一个神经网络中的重要函数：ReLU函数（修正线性单元）
+
+![ReLU函数](https://upload-images.jianshu.io/upload_images/1083955-bdae7323962fc37a.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+神经网络中含有**隐藏单元**。
+
+当你输入x时，经过神经网络会映射成y。从外部整体上看可以理解为输入数据得到输出的系统，神经网络可以理解为输入变成输出的在逻辑的分析过程，而隐藏单元则为分析过程的中间思考节点。
+
+只要给够足够多的x、y训练样本，神经网络便能计算更加精准的x到y的映射函数。
+![神经网络结构](https://upload-images.jianshu.io/upload_images/1083955-ae8228d7fa6adead.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+#### 1.2 监督学习（Supervised Learning）
+
+监督学习是机器学习的一种（one type of machine learning）
+
+结构化数据：具体离散的的数据
+
+非结构化数据：视频数据和音频数据
+
+监督学习使得计算机能够更好的理解非结构数据。
+
+![结构化数据和非结构化数据](https://upload-images.jianshu.io/upload_images/1083955-8fc51bf0e69f7d49.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
