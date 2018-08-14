@@ -5,7 +5,7 @@ subtitle:   ""
 iframe:     "//huangxuan.me/pwa-in-my-pov/"
 navcolor:   "invert"
 date:       2018-07-25
-author:     "WdBlink"
+author:     "YEan"
 tags:
     - LaTeX
     - 教程
