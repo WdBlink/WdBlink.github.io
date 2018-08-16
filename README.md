@@ -1,6 +1,6 @@
-# Hux Blog
+# Yean Blog
 
-### [View Live Hux Blog &rarr;](https://huangxuan.me)
+### [View Live Yean Blog &rarr;](https://WdBlink.github.io)
 
 ![](http://huangxuan.me/img/blog-desktop.jpg)
 
