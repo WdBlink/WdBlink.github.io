@@ -1,14 +1,14 @@
 ---
-layout:     keynote
+layout:     post
 title:      "神经网络和深度学习笔记（二）"
 subtitle:   "From Andrew Ng"
-iframe:     "//huangxuan.me/sw-101-gdgdf/"
-navcolor:   "invert"
-date:       2018-04-21
+date:       2018-04-17 15:05:00
 author:     "YEan"
+header-img: "img/post-bg-nextgen-web-pwa.jpg"
+header-mask: 0.3
+catalog:    true
 tags:
     - 机器学习
-    - NOTE
 ---
 
 当你构建一个神经网络时，有一些**技巧**是非常重要的。例如，在神经网络设计中，若想遍历m个样本的训练集并不需要直接用for循环去遍历所有样本。
