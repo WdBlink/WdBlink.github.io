@@ -1,0 +1,22 @@
+# 如何读取3D图像数据并进行padding
+
+在我们处理一些3D图像如医学扫描CT数据时（.mhd文件），根据实际需要可能要对其沿z轴padding，这时可以用如下代码：
+
+```python
+import numpy as np
+import SimpleITK as sitk
+
+#定义数据文件名。原始数据的名称为“Case00.mhd Case01.mhd...”，这里%02d实现的功能是将“%”后的subject_id替换前边的“%02d”，并自动高位补零为两位数，如subject_id=1，则subject_name = "Case01"
+subject_name = 'Case%02d' % subject_id	
+
+#这里用到SimpleITK包里的sitk.ReadImage方法和sitk.ReadImage方法，读取.mhd文件，并转换为三维矩阵的形式。
+file_list = os.path.join(raw_data_dir, subject_name+'.mhd')
+itk_img = sitk.ReadImage(file_list)
+img_array = sitk.GetArrayFromImage(itk_img)
+
+#使用numpy里的np.pad进行padding，数值为0，每次沿着z轴正负方向各padding一层，直到z轴数值大于50
+while img_array.shape[0] < 50:
+	img_array = np.pad(
+		img_array, [(1, 1), (0, 0), (0, 0)], 		         			mode='constant', constant_values=0)
+```
+
