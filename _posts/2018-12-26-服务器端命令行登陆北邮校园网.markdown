@@ -1,0 +1,52 @@
+---
+layout:     post
+title:      "服务器端命令行登陆北邮校园网"
+subtitle:   "不适合人类阅读，非常水的自我笔记"
+date:       2018-12-26 
+author:     "Yean"
+header-img: "img/post-bg-unix-linux.jpg"
+catalog: true
+tags:
+    - OS
+    - Unix
+    - Linux
+---
+
+北邮的校园网是需要登录网关的，有图形化界面的话，直接用浏览器打开 [10.3.8.211](http://10.3.8.211/) 即可。但是当 Linux 机器还没有图形界面时，需要用命令行来登录网关。因为登录和登出网关分别对应 POST 和 GET 请求。所以用 curl 命令即可解决。
+
+### [](https://www.ouyangsong.com/posts/43250/#%E7%99%BB%E5%BD%95)登录
+
+student_id 替换成学号，password 替换成网关密码。
+
+```
+curl 'http://10.3.8.211' --data "DDDDD=student_id&upass=password&0MKKey="
+```
+
+
+校园网的新网关 [http://ngw.bupt.edu.cn](http://ngw.bupt.edu.cn/) 的登陆方法的稍有不同。我选用的运营商是中国联通。
+```
+curl 'http://10.3.8.217/login' --data 'user=student_id&pass=password&line=CUC-BRAS'
+```
+
+
+
+如果是中国移动，那就把参数中的 line 改成 CMCC-BRAS。
+
+### [](https://www.ouyangsong.com/posts/43250/#%E9%80%80%E5%87%BA)退出
+
+```
+curl http://10.3.8.211/F.htm
+```
+
+新网关的退出。
+```
+curl -L http://10.3.8.217/logout
+```
+
+### [](https://www.ouyangsong.com/posts/43250/#%E5%BC%80%E6%9C%BA%E8%87%AA%E5%90%AF)开机自启
+
+在 `/etc/profile.d` 文件夹中新建文件 `login-bupt-network.sh`，这样每次开机就会自动执行 profile.d 文件夹所有的 shell 脚本。
+```
+curl 'http://10.3.8.211' --data "DDDDD=student_id&upass=password&0MKKey=" > /dev/null 2>&1
+```
+
