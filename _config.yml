@@ -13,8 +13,8 @@ future: true
 
 # SNS settings
 RSS: false
-weibo_username:     18811577526
-zhihu_username:     zhihu.com/people/wen-yi-bu-liang-qing-nian
+weibo_username:     https://weibo.com/u/3562303411
+zhihu_username:     https://www.zhihu.com/people/wen-yi-bu-liang-qing-nian/activities
 github_username:    WdBlink
 #twitter_username:   huxpro
 #facebook_username:  huxpro
