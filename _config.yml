@@ -13,8 +13,8 @@ future: true
 
 # SNS settings
 RSS: false
-weibo_username:     u/3562303411
-zhihu_username:     wen-yi-bu-liang-qing-nian/activities
+weibo_username:     yeanpy
+zhihu_username:     wdblink
 github_username:    WdBlink
 #twitter_username:   huxpro
 #facebook_username:  huxpro
