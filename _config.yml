@@ -5,7 +5,7 @@ header-img: img/home-bg.jpg
 email: buptypy@bupt.edu.cn
 description: "关于技术学习与生活感悟 | 尹鹏宇，BUPT postgraduate student | 这里是 @WdBlink尹鹏宇 的个人博客，与你一起发现更大的世界。"
 keyword: "尹鹏宇, WdBlink, @文艺不良青年, huxpro, 尹鹏宇的博客, WdBlink's Blog, 博客, 个人网站, 互联网, Web, python, 机器学习, 生活感悟"
-url: "https://huangxuan.me"              # your host, for absolute URL
+url: "https://wdblink.github.io/"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
@@ -13,8 +13,8 @@ future: true
 
 # SNS settings
 RSS: false
-weibo_username:     文艺不良青年
-zhihu_username:     文艺不良青年
+weibo_username:     18811577526
+zhihu_username:     zhihu.com/people/wen-yi-bu-liang-qing-nian
 github_username:    WdBlink
 #twitter_username:   huxpro
 #facebook_username:  huxpro
@@ -105,7 +105,7 @@ friends: [
         title: "VdeamoV的博客",
         href: "https://vdeamov.github.io/"
     },{
-         title: "Hux的博客",
-         href: "http://huangxuan.me/"
+         title: "Lil's log",
+         href: "https://lilianweng.github.io/lil-log/"
     }
 ]
