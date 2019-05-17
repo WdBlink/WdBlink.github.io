@@ -9,7 +9,7 @@ catalog: true
 tags:
 
     - 踩坑随记
-
+---
 # Ubuntu如何手动安装package
 
 有时候在源出现问题的时候用apt-get install的方式不能安装想要的package，这种情况下还有另外一种手动配置的方法：
