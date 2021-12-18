@@ -53,7 +53,7 @@ kramdown:
 
 
 # Disqus settings
-disqus_username: Yean
+disqus_username: hux
 # Duoshuo settings
 # duoshuo_username: WdBlink
 # Share component is depend on Comment so we can NOT use share only.
