@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#faf4f2">
+  <title>{% if page.title %}{{ page.title | escape }} / {% endif %}尹鹏宇 WdBlink</title>
+  <meta name="description" content="{{ page.description | default: site.description | escape }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <meta property="og:title" content="{{ page.title | default: site.title | escape }}">
+  <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+  <meta property="og:image" content="{{ '/img/head.jpg' | absolute_url }}">
+  <link rel="icon" href="{{ '/favicon.ico' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/studio/style.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/css/syntax.css' | relative_url }}">
+  <link rel="alternate" type="application/rss+xml" title="WdBlink Blog" href="{{ '/feed.xml' | relative_url }}">
+  <script defer src="{{ '/assets/studio/content.js' | relative_url }}"></script>
+  <script defer src="{{ '/assets/studio/site.js' | relative_url }}"></script>
+</head>
+<body>
+  <a class="skip" href="#main">跳到正文</a>
+  <header class="site-header"><div class="header-inner">
+    <a href="/#home" class="wordmark" aria-label="WdBlink 首页">WdBlink<span>.</span></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="navigation" aria-label="展开导航"><span></span><span></span></button>
+    <nav id="navigation" aria-label="主导航">
+      <a href="/#home">首页</a><a href="/#workflows">Workflows</a><a href="/#skills">Skills</a><a href="/#apps">Apps</a><a href="/#blog">Blog</a><a href="/#knowledge">知识地图</a><a href="/#photos">摄影</a>
+    </nav>
+  </div></header>
+  <div class="site-layout">
+    <aside class="profile" aria-label="个人资料">
+      <a class="portrait-link" href="/#home" aria-label="回到首页"><img class="portrait" src="{{ site.sidebar-avatar | relative_url }}" alt="尹鹏宇，骑行中的侧影" width="132" height="132"></a>
+      <p class="profile-name">尹鹏宇 <span>WdBlink</span></p>
+      <p class="profile-intro">用工具拓展能力，<br>用作品记录生活。</p>
+      <div class="socials">
+        <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.zhihu.com/people/{{ site.zhihu_username }}" target="_blank" rel="noopener noreferrer">知乎</a>
+        <a href="https://weibo.com/{{ site.weibo_username }}" target="_blank" rel="noopener noreferrer">微博</a>
+        <a href="mailto:{{ site.email }}">邮件</a>
+      </div>
+      <div class="sidebar-notes">
+        <section><h2>我关注的事情</h2><ul class="dot-list"><li>AI 与个人工作流</li><li>独立工具与软件</li><li>摄影、写作与表达</li></ul></section>
+        <section><h2>这里有什么</h2><p>做事的方法、可复用的能力，<br>还有慢慢积累的作品。</p><a class="quiet-link" href="/#knowledge">看看我的知识地图</a></section>
+        <p class="sidebar-signoff">诸恶莫作，自由快乐。</p>
+      </div>
+    </aside>
+    <main id="main" tabindex="-1"{% unless page.studio_home %} data-document="{% if page.date %}post{% else %}page{% endif %}"{% endunless %}>{{ content }}</main>
+  </div>
+  <footer class="site-footer"><span>© {{ 'now' | date: '%Y' }} WdBlink</span><span>持续学习，也持续创造。</span><a href="{{ '/feed.xml' | relative_url }}">RSS</a><a class="site-colophon" href="https://github.com/WdBlink/WdBlink.github.io">网站源码</a></footer>
+  <dialog id="dialog" aria-labelledby="dialog-title"><div class="dialog-top"><h2 id="dialog-title"></h2><button class="close" aria-label="关闭照片" autofocus>关闭 <span aria-hidden="true">×</span></button></div><div id="dialog-body"></div></dialog>
+</body>
+</html>

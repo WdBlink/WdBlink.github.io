@@ -1,0 +1,242 @@
+[
+  {
+    "id": "2hours",
+    "title": "集中审阅与分发",
+    "name": "2hours",
+    "category": "知识与研究",
+    "description": "汇总工作与收藏，口述批注，经确认后分发到对应 Codex 会话或项目。",
+    "license": "Proprietary",
+    "version": "0.1.0",
+    "source": "https://github.com/WdBlink/2hours"
+  },
+  {
+    "id": "workflow-skill-creator",
+    "title": "工作流 Skill 创作",
+    "name": "Workflow Skill Creator",
+    "category": "知识与研究",
+    "description": "固化重复操作、参数化任务差异，按需由当前宿主判断，并验证交付质量与实际成本。",
+    "license": "MIT",
+    "version": "0.2.0",
+    "source": "https://github.com/WdBlink/LLM-Skills/tree/main/skills/workflow-skill-creator"
+  },
+  {
+    "id": "good-benchmarks",
+    "title": "Benchmark 设计与审计",
+    "name": "Good Benchmarks",
+    "category": "知识与研究",
+    "description": "按场景选择 benchmark 形态与成功依据，交付可复用数据和评分器，验证可解性与比较公平性。",
+    "license": "MIT",
+    "version": "0.2.0",
+    "source": "https://github.com/WdBlink/LLM-Skills/tree/main/skills/good-benchmarks"
+  },
+  {
+    "id": "human-understanding",
+    "title": "结果理解与证据解释",
+    "name": "Human Understanding",
+    "category": "知识与研究",
+    "description": "以明确主语、固定术语和分步示例解释复杂概念与结果，按需制作图解和交互页面。",
+    "license": "Proprietary",
+    "version": "0.3.0",
+    "source": "https://github.com/WdBlink/LLM-Skills/tree/main/skills/human-understanding"
+  },
+  {
+    "id": "project-handoff",
+    "title": "项目交接",
+    "name": "Project Handoff",
+    "category": "知识与研究",
+    "description": "核对项目资产与历史，经独立审查生成可单独阅读的项目交接文档。",
+    "license": "Proprietary",
+    "version": "0.1.0",
+    "source": "https://github.com/WdBlink/LLM-Skills/tree/main/skills/project-handoff"
+  },
+  {
+    "id": "thinking-in-bets",
+    "title": "对赌决策工作流",
+    "name": "Thinking in Bets",
+    "category": "知识与研究",
+    "description": "从《对赌》提炼35个工具与七条工作流，按情境自动辅助选择、信念校准、复盘和风险规划。",
+    "license": "Proprietary",
+    "version": "0.1.0",
+    "source": "https://github.com/WdBlink/LLM-Skills/tree/main/skills/thinking-in-bets"
+  },
+  {
+    "id": "research-context",
+    "title": "研究任务上下文",
+    "name": "Research Context",
+    "category": "知识与研究",
+    "description": "以程序冻结证据、模型独立审查和受限修订，持续维护可恢复的研究上下文。",
+    "license": "MIT",
+    "version": "0.2.0",
+    "source": "https://github.com/WdBlink/LLM-Skills/tree/main/skills/research-context"
+  },
+  {
+    "id": "resource2skill-distiller",
+    "title": "资源方法技能提炼器",
+    "name": "Resource2Skill Distiller",
+    "category": "图像与多模态",
+    "description": "调用本机 Codex 提炼网页、文本与视频证据，交付保留来源和验证记录的候选技能。",
+    "license": "MIT",
+    "version": "0.3.0",
+    "source": "https://github.com/WdBlink/LLM-Skills/tree/main/skills/resource2skill-distiller"
+  },
+  {
+    "id": "pv-forecast-pptx",
+    "title": "光伏预测汇报 PPTX",
+    "name": "PV Forecast PPTX",
+    "category": "演示与汇报",
+    "description": "基于模板资源生成光伏与能源预测研究汇报 PPTX。",
+    "license": "Proprietary",
+    "version": "0.1.0",
+    "source": "https://github.com/WdBlink/LLM-Skills/tree/main/skills/air-pptx"
+  },
+  {
+    "id": "template-writing",
+    "title": "模板写作",
+    "name": "Template Writing",
+    "category": "知识与研究",
+    "description": "根据合同、技术协议和项目资料撰写并填充固定格式 DOCX 模板。",
+    "license": "Proprietary",
+    "version": "0.1.0",
+    "source": "https://github.com/WdBlink/LLM-Skills/tree/main/skills/template-writing"
+  },
+  {
+    "id": "transcript-source-compiler",
+    "title": "转写来源编译器",
+    "name": "Transcript Source Compiler",
+    "category": "知识与研究",
+    "description": "将大段演讲转写编译成可追溯的来源底稿和可读文章。",
+    "license": "MIT",
+    "version": "0.1.0",
+    "source": "https://github.com/WdBlink/LLM-Skills/tree/main/skills/transcript-source-compiler"
+  },
+  {
+    "id": "daily-todo-planner",
+    "title": "每日待办计划器",
+    "name": "Daily Todo Planner",
+    "category": "知识与研究",
+    "description": "将杂乱每日描述转成可复盘学习、可提前预研的时间块计划。",
+    "license": "Proprietary",
+    "version": "0.1.0",
+    "source": "https://github.com/WdBlink/LLM-Skills/tree/main/skills/daily-todo-planner"
+  },
+  {
+    "id": "mind-map",
+    "title": "项目思维导图",
+    "name": "Mind Map",
+    "category": "知识与研究",
+    "description": "将项目判断记录为 Obsidian 双链节点、紧凑 schema 索引、图谱中性的时间线/溯源和可交互 HTML 图谱。",
+    "license": "MIT",
+    "version": "0.2.13",
+    "source": "https://github.com/WdBlink/LLM-Skills/tree/main/skills/mind-map"
+  },
+  {
+    "id": "auto-yolo-dataset",
+    "title": "自动 YOLO 数据集",
+    "name": "Auto YOLO Dataset",
+    "category": "图像与多模态",
+    "description": "通过本地或远程检测器生成 YOLO、COCO、VOC 和 Label Studio 数据集资产。",
+    "license": "Proprietary",
+    "version": "0.1.0",
+    "source": "https://github.com/WdBlink/LLM-Skills/tree/main/skills/auto-yolo-dataset"
+  },
+  {
+    "id": "ms-qwen-vl",
+    "title": "魔搭 Qwen-VL 视觉解析",
+    "name": "MS Qwen VL",
+    "category": "图像与多模态",
+    "description": "用 Qwen-VL 解析图片/视频，并可输出 YOLO 数据集。",
+    "license": "MIT",
+    "version": "0.1.0",
+    "source": "https://github.com/WdBlink/LLM-Skills/tree/main/skills/ms-qwen-vl"
+  },
+  {
+    "id": "weekly-report",
+    "title": "中文周报生成器",
+    "name": "Weekly Report",
+    "category": "知识与研究",
+    "description": "从工作日志生成可迁移的中文工作周报 DOCX。",
+    "license": "Proprietary",
+    "version": "0.1.0",
+    "source": "https://github.com/WdBlink/LLM-Skills/tree/main/skills/weekly-report"
+  },
+  {
+    "id": "karpathy-autoresearch-adapter",
+    "title": "Karpathy 自动研究适配器",
+    "name": "Karpathy Autoresearch Adapter",
+    "category": "知识与研究",
+    "description": "将现有仓库改造成以真实评价器为核心的自动研究协议项目。",
+    "license": "MIT",
+    "version": "0.1.0",
+    "source": "https://github.com/WdBlink/LLM-Skills/tree/main/skills/karpathy-autoresearch-adapter"
+  },
+  {
+    "id": "social-cover-maker",
+    "title": "社交平台封面生成器",
+    "name": "Social Cover Maker",
+    "category": "图像与多模态",
+    "description": "基于 Open Design 风格系统为公众号、小红书、知乎等平台生成可校验的 SVG/PNG 封面。",
+    "license": "MIT",
+    "version": "0.1.0",
+    "source": "https://github.com/WdBlink/LLM-Skills/tree/main/skills/social-cover-maker"
+  },
+  {
+    "id": "paper-deconstruction",
+    "title": "论文精读",
+    "name": "Paper Deconstruction",
+    "category": "知识与研究",
+    "description": "用结构-故事-拆解-评价-视觉化五阶法把一篇论文精读成带配图的可视化笔记。",
+    "license": "MIT",
+    "version": "0.1.0",
+    "source": "https://github.com/WdBlink/LLM-Skills/tree/main/skills/paper-deconstruction"
+  },
+  {
+    "id": "glm-ocr-pdf2md",
+    "title": "本地GLM-OCR扫描PDF转Markdown",
+    "name": "GLM-OCR PDF to Markdown",
+    "category": "图像与多模态",
+    "description": "本地ZhipuAI/GLM-OCR将扫描版PDF转为带目录和页码标记的Markdown书籍。",
+    "license": "MIT",
+    "version": "0.1.0",
+    "source": "https://github.com/WdBlink/LLM-Skills/tree/main/skills/glm-ocr-pdf2md"
+  },
+  {
+    "id": "academic-writing-storytelling",
+    "title": "学术写作讲故事框架",
+    "name": "Academic Writing Storytelling Framework",
+    "category": "知识与研究",
+    "description": "学术写作讲故事的四派综合框架——把\"讲故事\"拆成6个可操作心智模型与12步工作流。",
+    "license": "MIT",
+    "version": "0.1.0",
+    "source": "https://github.com/WdBlink/LLM-Skills/tree/main/skills/academic-writing-storytelling"
+  },
+  {
+    "id": "annie-duke-perspective",
+    "title": "Annie Duke 对赌思维",
+    "name": "Annie Duke Perspective",
+    "category": "知识与研究",
+    "description": "用 Annie Duke 的对赌思维做决策顾问——把决策质量与结果质量分开，强制概率式叙述与责任性预测。",
+    "license": "MIT",
+    "version": "0.2.0",
+    "source": "https://github.com/WdBlink/LLM-Skills/tree/main/skills/annie-duke-perspective"
+  },
+  {
+    "id": "autoresearch-paper",
+    "title": "自动研究论文流水线",
+    "name": "Autoresearch Paper",
+    "category": "知识与研究",
+    "description": "从一段话课题描述到可发表论文——Mavis agent 团队 + per-topic watchdog 一键跑通。",
+    "license": "MIT",
+    "version": "0.1.0",
+    "source": null
+  },
+  {
+    "id": "photographer-style",
+    "title": "摄影师风格拆解",
+    "name": "Photographer Style",
+    "category": "图像与多模态",
+    "description": "拆解摄影风格，交付介绍、参考图与双模式提示词，并按请求归档到 GitHub 私有仓库。",
+    "license": "Proprietary",
+    "version": "0.3.0",
+    "source": "https://github.com/WdBlink/LLM-Skills/tree/main/skills/photographer-style"
+  }
+]

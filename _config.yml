@@ -1,11 +1,11 @@
 # Site settings
-title: Yean Blog
-SEOTitle: 尹鹏宇的博客 | Yean's Blog
+title: 尹鹏宇 WdBlink
+SEOTitle: 尹鹏宇 WdBlink | 工作流、工具与生活
 header-img: img/home-bg-art.jpg
 email: buptypy@bupt.edu.cn
-description: "关于技术学习与生活感悟 | 尹鹏宇，BUPT postgraduate student | 这里是 @WdBlink尹鹏宇 的个人博客，与你一起发现更大的世界。"
+description: "尹鹏宇 WdBlink 的个人网站。工作流、Skills、Apps，以及一路积累的文字与影像。"
 keyword: "尹鹏宇, WdBlink, @文艺不良青年, huxpro, 尹鹏宇的博客, WdBlink's Blog, 博客, 个人网站, 互联网, Web, python, 机器学习, 生活感悟"
-url: "https://wdblink.github.io/"              # your host, for absolute URL
+url: "https://wdblink.github.io"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
@@ -26,8 +26,7 @@ github_username:    WdBlink
 # from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
 highlighter: rouge
 permalink: pretty
-paginate: 10
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","README.zh.md"]
+exclude: ["less","node_modules","vendor","scripts","design","design-demos",".blurt","Gemfile","Gemfile.lock","Gruntfile.js","package.json","README.md","README.zh.md"]
 anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
 # If you have timezone issue (e.g. #68) in China, uncomment to use this:
 #timezone: CN  
@@ -38,7 +37,7 @@ anchorjs: true                          # if you want to customize anchor. check
 # from PR#40, to support local preview for Jekyll 3.0
 # make sure you have this gem installed
 # `$ gem install jekyll-paginate`
-plugins: [jekyll-paginate]
+plugins: []
 
 
 
@@ -89,7 +88,7 @@ featured-condition-size: 1              # A tag will be featured if the size of 
 
 # Progressive Web Apps
 chrome-tab-theme-color: "#000000"
-service-worker: true
+service-worker: false
 
 
 
