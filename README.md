@@ -24,7 +24,7 @@ bundle exec jekyll serve --host 127.0.0.1
 
 - `_posts/` 保存博客原文，保留原日期、作者和文章 URL。
 - `_data/studio_skills.json` 保存公开的 Skills 目录。
-- `_data/studio_photos.json` 保存摄影尺寸与七牛 HTTPS 地址。照片原片不存入仓库。
+- `_data/studio_photos.json` 保存摄影尺寸与站内图片路径。`assets/studio/photos/` 仅保存去除 EXIF 元数据、最长边不超过 1920 像素的 10 张压缩网页副本，合计约 4.9 MB。照片原片不存入仓库。
 - `assets/studio/content.js` 将 Jekyll 内容生成为前端索引。
 - `assets/studio/site.js` 和 `assets/studio/style.css` 实现页面交互与样式。
 - `_layouts/studio.html` 和 `_layouts/studio-post.html` 实现站点外框与文章布局。
@@ -37,7 +37,7 @@ bundle exec jekyll doctor
 python3 scripts/check_site.py http://127.0.0.1:4000/
 ```
 
-浏览器检查需要 Python Playwright 及其 Chromium。它检查桌面与手机页面、文章、筛选、导航、图片和摄影弹窗。
+浏览器检查需要 Python Playwright 及其 Chromium。它检查桌面与手机页面、文章、筛选、导航、图片和摄影弹窗，并阻止、报告站点向七牛发起资源请求。
 
 ## 仓库历史与许可
 

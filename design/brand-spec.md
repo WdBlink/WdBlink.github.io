@@ -2,7 +2,7 @@
 
 - 风格参考：https://yate.fun/ 。本次为个人内容改编，不复制对方身份与文章。实现继续使用原站 Jekyll，不安装 al-folio。
 - 身份、头像、GitHub、知乎、微博与邮箱来自原站 `_config.yml`。
-- 摄影为用户选定的十张实拍照片。网页副本去除元数据并压缩，原片不改动；由用户的七牛空间承载。
+- 摄影为用户选定的十张实拍照片。网页副本去除 EXIF 元数据、最长边限制为 1920 像素并压缩，由 GitHub Pages 随站点发布。原片不改动、不进入仓库。
 - 摄影页引语「摄影是一种语言。」译自 Ansel Adams 的 “Photography is a language.”，来源 https://articles.anseladams.com/ansel-adams-quotes/ 。
 - Agent Notebook 图标与示例界面来自 https://github.com/WdBlink/agent-notebook ，原路径为 `app/desktop/assets/app-icon.png` 与 `.github/agent-notebook-preview.png`。
 - CLI 演示来自 https://github.com/WdBlink/agent-note-cli 的 `docs/assets/agent-note-preview.gif`，原仓库注明使用合成会话与固定示例数据。

@@ -7,19 +7,29 @@ from playwright.sync_api import sync_playwright, expect
 parser = argparse.ArgumentParser()
 parser.add_argument("base", nargs="?", default="http://127.0.0.1:8790/")
 parser.add_argument("--screenshots", default=".blurt/site-check")
-parser.add_argument("--local-photos", type=Path, help="Layout-only diagnostic; substitutes local photo files, not an HTTPS check.")
 args = parser.parse_args()
 shots = Path(args.screenshots)
 shots.mkdir(parents=True, exist_ok=True)
 errors = []
+qiniu_requests = []
+
+
+def is_qiniu_request(url):
+    host = (urlparse(url).hostname or "").lower()
+    return host == "img.pbtmcloud.cn" or any(
+        host == suffix or host.endswith("." + suffix)
+        for suffix in ["qiniu.com", "qiniu.io", "qbox.me", "clouddn.com", "qiniudn.com", "qiniucdn.com", "qnssl.com"])
+
+
+def block_qiniu(route):
+    qiniu_requests.append(route.request.url)
+    route.abort()
+
 
 with sync_playwright() as playwright:
     browser = playwright.chromium.launch()
     context = browser.new_context(viewport={"width": 1440, "height": 1000}, reduced_motion="reduce")
-    if args.local_photos:
-        context.route("https://img.pbtmcloud.cn/*.jpg", lambda route: route.fulfill(
-            path=args.local_photos / Path(urlparse(route.request.url).path).name,
-            content_type="image/jpeg"))
+    context.route(lambda url: is_qiniu_request(url), block_qiniu)
     page = context.new_page()
     page.on("pageerror", lambda error: errors.append(str(error)))
     page.on("response", lambda response: errors.append(f"HTTP {response.status}: {response.url}")
@@ -29,6 +39,8 @@ with sync_playwright() as playwright:
     assert len(data["skills"]) == 24
     assert len(data["photos"]) == 10
     assert len(data["posts"]) == 33
+    for photo in data["photos"]:
+        assert photo["src"].startswith("/assets/studio/photos/"), photo["src"]
     routes = ["home", "workflows", "skills", "apps", "blog", "knowledge", "photos",
               "flow/photography", "flow/presentation", "flow/writing", "flow/agent-work",
               "app/agent-notebook", "app/agent-note-cli"]
@@ -46,6 +58,8 @@ with sync_playwright() as playwright:
             if route == "photos":
                 page.locator(".photo-gallery img").evaluate_all("imgs => imgs.forEach(img => img.loading='eager')")
                 page.wait_for_function("[...document.querySelectorAll('.photo-gallery img')].every(img=>img.complete&&img.naturalWidth>0)")
+                sizes = page.locator(".photo-gallery img").evaluate_all("imgs=>imgs.map(img=>[img.naturalWidth,img.naturalHeight])")
+                assert len(sizes) == 10 and all(0 < max(size) <= 1920 for size in sizes), sizes
                 assert page.locator(".photo-caption, figcaption").count() == 0
                 boxes = page.locator(".photo-item").evaluate_all("items=>items.map(item=>({box:item.getBoundingClientRect().toJSON(),ratio:Number(item.querySelector('img').width)/Number(item.querySelector('img').height)}))")
                 for item in boxes:
@@ -123,11 +137,9 @@ with sync_playwright() as playwright:
     discussion = page.evaluate("(()=>{const config={page:{}};window.disqus_config.call(config);return config.page;})()")
     assert discussion["identifier"] == page.locator(".post-comments").get_attribute("data-discussion-id")
     assert discussion["url"].startswith("https://wdblink.github.io/2019/01/21/")
+    assert not qiniu_requests, qiniu_requests
     assert not errors, errors
     browser.close()
 
 print(f"PASS: {len(routes)} routes at 1440/375px; 33 real posts; filters, links, app tabs, photo dialog, mobile nav and local assets.")
-if args.local_photos:
-    print("LIMIT: photo files substituted for layout checks; Qiniu HTTPS has NOT been verified.")
-else:
-    print("PASS: gallery images loaded from Qiniu HTTPS without certificate bypass.")
+print("PASS: 10 compressed gallery images loaded from this site; zero Qiniu resource requests.")
