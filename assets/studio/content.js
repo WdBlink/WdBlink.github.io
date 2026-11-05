@@ -4,6 +4,7 @@ permalink: /assets/studio/content.js
 ---
 window.STUDIO_CONTENT = {
   skills: {{ site.data.studio_skills | jsonify }},
+  apps: {{ site.data.studio_apps | jsonify }},
   photos: {{ site.data.studio_photos | jsonify }},
   posts: [
   {% for post in site.posts %}

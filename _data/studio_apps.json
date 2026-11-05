@@ -1,0 +1,27 @@
+[
+  {
+    "id": "agent-notebook",
+    "title": "Agent Notebook",
+    "label": "桌面端",
+    "repository": "https://github.com/WdBlink/agent-notebook",
+    "action": "下载 macOS 版",
+    "url": "https://github.com/WdBlink/agent-notebook/releases/latest",
+    "headline": "把 Agent 的工作，整理成可继续的线索。",
+    "description": "本地优先的 macOS 应用。回看 Codex 与 Claude Code 的会话，把工作现场整理成带来源的工作线，并由人完成收束。",
+    "version": "v0.7.4",
+    "license": "MIT"
+  },
+  {
+    "id": "agent-note-cli",
+    "title": "agent-note-cli",
+    "label": "命令行",
+    "repository": "https://github.com/WdBlink/agent-note-cli",
+    "action": "查看安装与使用",
+    "url": "https://github.com/WdBlink/agent-note-cli#readme",
+    "headline": "在终端里，继续同一份工作。",
+    "description": "Agent Notebook 的命令行入口。浏览会话与工作线，使用只读终端界面回看进展，也可进入结构化 Today 工作流。",
+    "installCommand": "brew install wdblink/tap/agent-note-cli",
+    "version": "v0.6.0",
+    "license": "MIT"
+  }
+]

@@ -24,6 +24,7 @@ bundle exec jekyll serve --host 127.0.0.1
 
 - `_posts/` 保存博客原文，保留原日期、作者和文章 URL。
 - `_data/studio_skills.json` 保存公开的 Skills 目录。
+- `_data/studio_apps.json` 保存 Apps 的介绍、版本、许可与安装入口，页面只负责展示。
 - `_data/studio_photos.json` 保存摄影尺寸与站内图片路径。`assets/studio/photos/` 仅保存去除 EXIF 元数据、最长边不超过 1920 像素的 10 张压缩网页副本，合计约 4.9 MB。照片原片不存入仓库。
 - `assets/studio/content.js` 将 Jekyll 内容生成为前端索引。
 - `assets/studio/site.js` 和 `assets/studio/style.css` 实现页面交互与样式。
@@ -38,6 +39,14 @@ python3 scripts/check_site.py http://127.0.0.1:4000/
 ```
 
 浏览器检查需要 Python Playwright 及其 Chromium。它检查桌面与手机页面、文章、筛选、导航、图片和摄影弹窗，并阻止、报告站点向七牛发起资源请求。
+
+## 定时内容维护
+
+维护流程独立保存在 [.agents/skills/site-content-maintenance](.agents/skills/site-content-maintenance/SKILL.md)，由 Jetson 的 Hermes 每天北京时间 06:00 执行。公开来源无变化时静默结束，常规同步不调用模型。
+
+Skills 从 `WdBlink/LLM-Skills` 公开目录同步。已收录 Apps 跟踪正式 Release，并检查许可与安装入口。人工长介绍和网站里的 Workflows 文章不每日改写。缺少来源、版本倒退、未知许可、检查失败和并发冲突均停止发布并报告异常，不自动删除旧内容。
+
+候选更新先在独立分支运行 GitHub Actions 的单元测试、内容合同、Jekyll 构建和全站浏览器检查。通过后快进到 `master`，再核对线上内容。每日自动改动仅允许两份 Skills/Apps 数据，不涉及页面设计、博客或照片。部署信息与异常排查见 [维护方案](design/site-maintenance.md)。
 
 ## 仓库历史与许可
 

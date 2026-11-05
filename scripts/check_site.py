@@ -1,5 +1,6 @@
 """Check the built site: python3 scripts/check_site.py http://127.0.0.1:8790/."""
 import argparse
+import json
 from pathlib import Path
 from urllib.parse import urlparse
 from playwright.sync_api import sync_playwright, expect
@@ -36,7 +37,12 @@ with sync_playwright() as playwright:
             if response.status >= 400 and response.url.startswith(args.base) else None)
     page.goto(args.base)
     data = page.evaluate("window.STUDIO_CONTENT")
-    assert len(data["skills"]) == 24
+    root = Path(__file__).resolve().parent.parent
+    expected_skills = json.loads((root / "_data/studio_skills.json").read_text())
+    expected_apps = json.loads((root / "_data/studio_apps.json").read_text())
+    assert expected_skills and data["skills"] == expected_skills
+    assert len({skill["id"] for skill in data["skills"]}) == len(data["skills"])
+    assert data["apps"] == expected_apps
     assert len(data["photos"]) == 10
     assert len(data["posts"]) == 33
     for photo in data["photos"]:
@@ -77,11 +83,21 @@ with sync_playwright() as playwright:
     expect(page.locator(".empty")).to_be_visible()
     page.goto(args.base + "#apps")
     page.get_by_role("tab", name="命令行", exact=True).click()
-    expect(page.locator(".install-command")).to_contain_text("brew install wdblink/tap/agent-note-cli")
+    cli = next(app for app in expected_apps if app["id"] == "agent-note-cli")
+    expect(page.locator(".install-command")).to_contain_text(cli["installCommand"])
+    expect(page.locator("#app-panel")).to_contain_text(cli["version"])
     expect(page.locator("#app-panel")).to_have_attribute("aria-labelledby", "tab-agent-note-cli")
     page.keyboard.press("ArrowLeft")
     expect(page.get_by_role("tab", name="桌面端", exact=True)).to_be_focused()
     expect(page.locator("#app-panel .product-screenshot")).to_have_attribute("src", "/assets/studio/agent-notebook-preview.png")
+    unsafe_text = '<img src=x onerror="window.__maintenanceXss=true">'
+    page.evaluate("value=>Object.assign(window.STUDIO_CONTENT.apps[0],{headline:value,description:value,version:value})", unsafe_text)
+    page.goto(args.base + "#app/agent-notebook")
+    expect(page.locator(".app-panel-copy h3")).to_have_text(unsafe_text)
+    expect(page.locator(".app-description")).to_have_text(unsafe_text)
+    assert page.locator(".app-panel-copy img").count() == 0
+    assert page.evaluate("window.__maintenanceXss !== true")
+    page.evaluate("apps=>window.STUDIO_CONTENT.apps.forEach((app,index)=>Object.assign(app,apps[index]))", expected_apps)
     page.goto(args.base + "#flow/agent-work")
     page.locator('.related a[href="/#skill/project-handoff"]').click()
     expect(page.locator("main h1")).to_have_text("项目交接")

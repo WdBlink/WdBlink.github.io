@@ -1,0 +1,49 @@
+name: Site content checks
+
+on:
+  push:
+    branches:
+      - master
+      - 'codex/site-content-*'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: content-check-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: ruby/setup-ruby@de492cf36cbab201753d720ce4f4e336cd688c94
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Validate updater and content
+        run: |
+          python3 -B -m unittest discover -s .agents/skills/site-content-maintenance/tests -v
+          python3 .agents/skills/site-content-maintenance/scripts/maintain.py validate --repo .
+      - name: Build website
+        run: |
+          bundle exec jekyll build --strict_front_matter
+          bundle exec jekyll doctor
+      - name: Install browser check
+        run: |
+          python3 -m pip install playwright==1.62.0
+          python3 -m playwright install --with-deps chromium
+      - name: Check desktop, mobile, posts and images
+        run: |
+          python3 -m http.server 8790 --bind 127.0.0.1 --directory _site &
+          server_pid=$!
+          trap 'kill "$server_pid"' EXIT
+          python3 scripts/check_site.py http://127.0.0.1:8790/

@@ -1,4 +1,4 @@
-const {skills, photos, posts} = window.STUDIO_CONTENT;
+const {skills, apps, photos, posts} = window.STUDIO_CONTENT;
 const main = document.querySelector('main');
 const navigation = document.querySelector('#navigation');
 const dialog = document.querySelector('#dialog');
@@ -10,11 +10,6 @@ const link = (url, label, className='') => '<a class="' + className + '" href="'
 const tags = items => '<div class="pills metadata">' + items.map(item => '<span class="pill neutral">' + escapeHtml(item) + '</span>').join('') + '</div>';
 const intro = (title, description, subtitle='') => '<div class="page-intro">' + (subtitle ? '<p class="subtitle">' + escapeHtml(subtitle) + '</p>' : '') + '<h1>' + escapeHtml(title) + '</h1><p>' + escapeHtml(description) + '</p></div>';
 const back = (route, label) => link(routeUrl(route), '返回' + label, 'back');
-
-const apps = [
-  {id:'agent-notebook', title:'Agent Notebook', label:'桌面端', repository:'https://github.com/WdBlink/agent-notebook', action:'下载 macOS 版', url:'https://github.com/WdBlink/agent-notebook/releases/latest'},
-  {id:'agent-note-cli', title:'agent-note-cli', label:'命令行', repository:'https://github.com/WdBlink/agent-note-cli', action:'查看安装与使用', url:'https://github.com/WdBlink/agent-note-cli#readme'},
-];
 
 const workflows = [
   {id:'photography', title:'从一次拍摄，到一组作品', category:'摄影', description:'观察、拍摄、选片、编排。把按下快门之后的事，也认真做完。', thumb:'photo', skillIds:['photographer-style','social-cover-maker'], appIds:[], result:'photos',
@@ -114,8 +109,8 @@ function skillPage(id) {
 function appPanel(id) {
   const app = byId(apps,id);
   const desktop = id==='agent-notebook';
-  return '<div class="app-panel-copy"><h3>' + (desktop?'把 Agent 的工作，整理成可继续的线索。':'在终端里，继续同一份工作。') + '</h3><p class="app-description">' + (desktop?'本地优先的 macOS 应用。回看 Codex 与 Claude Code 的会话，把工作现场整理成带来源的工作线，并由人完成收束。':'Agent Notebook 的命令行入口。浏览会话与工作线，使用只读终端界面回看进展，也可进入结构化 Today 工作流。') + '</p><div class="button-group">' + link(app.url,app.action,'button') + link(app.repository,'GitHub 源码','button secondary') + '</div></div>' +
-    (desktop?'<img class="product-screenshot" src="' + asset('agent-notebook-preview.png') + '" alt="Agent Notebook 桌面端 Today 界面，展示示例会话、工作时间线与来源筛选" width="1440" height="1000" fetchpriority="high">':'<div class="install-command"><code>brew install wdblink/tap/agent-note-cli</code><button data-copy="brew install wdblink/tap/agent-note-cli">复制命令</button></div><picture><source media="(prefers-reduced-motion: reduce)" srcset="' + asset('agent-note-poster.png') + '"><img class="product-screenshot cli-screenshot" src="' + asset('agent-note-preview.gif') + '" alt="agent-note-cli 终端演示，使用合成会话与固定示例数据展示工作线和证据阅读" width="1090" height="630" fetchpriority="high"></picture>') +
+  return '<div class="app-panel-copy"><h3>' + escapeHtml(app.headline) + '</h3><p class="app-description">' + escapeHtml(app.description) + '</p>' + tags([app.version, app.license]) + '<div class="button-group">' + link(app.url,app.action,'button') + link(app.repository,'GitHub 源码','button secondary') + '</div></div>' +
+    (desktop?'<img class="product-screenshot" src="' + asset('agent-notebook-preview.png') + '" alt="Agent Notebook 桌面端 Today 界面，展示示例会话、工作时间线与来源筛选" width="1440" height="1000" fetchpriority="high">':'<div class="install-command"><code>' + escapeHtml(app.installCommand) + '</code><button data-copy="' + escapeHtml(app.installCommand) + '">复制命令</button></div><picture><source media="(prefers-reduced-motion: reduce)" srcset="' + asset('agent-note-poster.png') + '"><img class="product-screenshot cli-screenshot" src="' + asset('agent-note-preview.gif') + '" alt="agent-note-cli 终端演示，使用合成会话与固定示例数据展示工作线和证据阅读" width="1090" height="630" fetchpriority="high"></picture>') +
     '<p class="app-caption">' + (desktop?'公开界面截图，内容为示例工作记录。':'终端演示使用合成会话与固定示例数据，不含私人记录。') + '</p>';
 }
 
